@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Master\Role;
+use App\Livewire\Master\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('/role', Role::class);
+
+Route::get('/user', User::class);

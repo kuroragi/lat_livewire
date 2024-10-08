@@ -32,7 +32,7 @@
                         <tr wire:key='{{ $role->slug }}'>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $role->name }}</td>
-                            <td class="d-inline">
+                            <td>
                                 <button wire:click='edit({{ $role->id }})' class="btn btn-outline-warning btn-sm"
                                     data-toggle="modal" data-target="#roleModal"><i class="fas fa-edit"></i>
                                     Edit</button>
