@@ -68,6 +68,7 @@ class User extends Component
             $this->role_slug = $user->role_slug;
             $this->email = $user->email;
             $this->password = $user->password;
+            $this->dispatch('dismiss_modal');
         }
     }
 

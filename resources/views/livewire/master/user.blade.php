@@ -41,7 +41,7 @@
                                     data-toggle="modal" data-target="#userModal"><i class="fas fa-edit"></i>
                                     Edit</button>
                                 <button wire:click='delete({{ $user->id }})'
-                                    wire:confirm.prompt='Yakin untuk menghapus user ini?\n\nKetik USER-{{ $user->name }} untuk konfirmasi|USER-{{ $user->slug }}'
+                                    wire:confirm.prompt='Yakin untuk menghapus user ini?\n\nKetik USER untuk konfirmasi|USER'
                                     class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i>
                                     Hapus</button>
                             </td>
@@ -77,20 +77,21 @@
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
-                    
+
                     <div class="mb-3">
                         <label for="role_slug" class="form-label">role_slug</label>
                         <select wire:model='role_slug' id="role_slug" class="form-control">
                             <option value="{{ $roles[0]->slug }}">--- Pilih Role ---</option>
                             @foreach ($roles as $role)
-                                <option wire:key='{{ $role->slug }}' value="{{ $role->slug }}">{{ $role->name }}</option>
+                                <option wire:key='{{ $role->slug }}' value="{{ $role->slug }}">
+                                    {{ $role->name }}</option>
                             @endforeach
                         </select>
                         @error('role_slug')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
-                    
+
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input wire:model='email' type="email" id="email" class="form-control">
@@ -98,7 +99,7 @@
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
-                    
+
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
                         <div class="input-group">
@@ -110,8 +111,9 @@
                         @enderror
                     </div>
 
-                    <button wire:click.prevent='save' class="btn btn-{{ $isEditMode ? 'warning' : 'success' }} w-100"
-                        data-dismiss="modal"><i class="fas fa-floppy-disk"></i> Simpan
+                    <button wire:click.prevent='save'
+                        class="btn btn-{{ $isEditMode ? 'warning' : 'success' }} w-100"><i
+                            class="fas fa-floppy-disk"></i> Simpan
                         {{ $isEditMode ? 'Perubahan' : '' }}</button>
                 </div>
 
@@ -127,7 +129,7 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            $("#togglePassword").on("click", function(){
+            $("#togglePassword").on("click", function() {
                 let passwordInput = $("#password");
                 let icon = $("#iconPass");
 
@@ -141,6 +143,10 @@
                     icon.removeClass("fa-eye-slash")
                 }
             })
+        })
+
+        Livewire.on("dismiss_modal", function() {
+            $("#userModal").modal("hide");
         })
     </script>
 @endpush

@@ -21,6 +21,8 @@ class Role extends Component
         $this->roles = Roles::orderBy('name')->get();
     }
 
+    public $listener = ['dismiss_modal', 'resetField'];
+
     public function render()
     {
         return view('livewire.master.role');
@@ -53,6 +55,7 @@ class Role extends Component
             $this->id_role = $role->id;
             $this->name = $role->name;
             $this->slug = $role->slug;
+            $this->dispatch('dismiss_modal');
         }
     }
 

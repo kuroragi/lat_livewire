@@ -2,6 +2,8 @@
 
 use App\Livewire\Master\Role;
 use App\Livewire\Master\User;
+use App\Livewire\Post\Post;
+use App\Livewire\Post\PostCategory;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +24,7 @@ Route::get('/', function () {
 Route::get('/role', Role::class);
 
 Route::get('/user', User::class);
+
+Route::get('/post_category', PostCategory::class);
+
+Route::get('/post', Post::class);

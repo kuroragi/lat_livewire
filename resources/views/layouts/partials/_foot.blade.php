@@ -1,50 +1,53 @@
-<script src="/assets/plugins/jquery/jquery.min.js"></script>
+{{-- <script src="/assets/plugins/jquery/jquery.min.js"></script> --}}
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
 
 <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<script src="/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+{{-- <script src="/assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <script src="/assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="/assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="/assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script> --}}
 <script src="/assets/plugins/jszip/jszip.min.js"></script>
 <script src="/assets/plugins/pdfmake/pdfmake.min.js"></script>
 <script src="/assets/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="/assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+{{-- <script src="/assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="/assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script> --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
 
 <script>
-    $(function() {
-        $("#example1")
-            .DataTable({
-                responsive: true,
-                lengthChange: false,
-                autoWidth: false,
-                buttons: [
-                    "copy",
-                    "csv",
-                    "excel",
-                    "pdf",
-                    "print",
-                    "colvis",
-                ],
-            })
-            .buttons()
-            .container()
-            .appendTo("#example1_wrapper .col-md-6:eq(0)");
-        $("#example2").DataTable({
-            paging: true,
-            lengthChange: false,
-            searching: false,
-            ordering: true,
-            info: true,
-            autoWidth: false,
-            responsive: true,
-        });
-    });
+    new DataTable("#example1");
+    // $(function() {
+    //     $("#example1")
+    //         .DataTable({
+    //             responsive: true,
+    //             lengthChange: false,
+    //             autoWidth: false,
+    //             buttons: [
+    //                 "copy",
+    //                 "csv",
+    //                 "excel",
+    //                 "pdf",
+    //                 "print",
+    //                 "colvis",
+    //             ],
+    //         })
+    //         .buttons()
+    //         .container()
+    //         .appendTo("#example1_wrapper .col-md-6:eq(0)");
+    //     $("#example2").DataTable({
+    //         paging: true,
+    //         lengthChange: false,
+    //         searching: false,
+    //         ordering: true,
+    //         info: true,
+    //         autoWidth: false,
+    //         responsive: true,
+    //     });
+    // });
 </script>
 
 <script src="/assets/dist/js/adminlte.min2167.js?v=3.2.0"></script>
@@ -66,7 +69,8 @@
     $.widget.bridge("uibutton", $.ui.button);
 </script>
 
-<script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+{{-- <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
 <script src="/assets/plugins/chart.js/Chart.min.js"></script>
 

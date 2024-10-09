@@ -82,13 +82,27 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="/post" class="nav-link">
-                    <i class="nav-icon fas fa-newspaper"></i>
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-file"></i>
                     <p>
                         Post
-                        <span class="right badge badge-danger">New</span>
+                        <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="/post_category" class="nav-link">
+                            <i class=" nav-icon fas fa-file"></i>
+                            <p>Post Category</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/post" class="nav-link">
+                            <i class=" nav-icon fas fa-newspaper"></i>
+                            <p>Post</p>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a href="../widgets.html" class="nav-link">
